@@ -11,6 +11,21 @@
 登录后获取 API Key，替换配置文件中的 ${API_KEY}
 
 ## 配置示例
+### Cline
+```json
+{
+    "mcpServers": {
+        "huxiu-mcp": {
+            "type": "streamableHttp",
+            "url": "https://api-ms-assist.huxiu.com/mcp",
+            "headers": {
+                "Authorization": "Bearer ${API_KEY}"
+            }
+        }
+    }
+}
+```
+
 ### Cherry Studio
 ```json
 {
@@ -28,18 +43,17 @@
 }
 ```
 
-### Cline
+### Trae (内置智能体选择 Builder with MCP)
 ```json
 {
-    "mcpServers": {
-        "huxiu-mcp": {
-            "type": "streamableHttp",
-            "url": "https://api-ms-assist.huxiu.com/mcp",
-            "headers": {
-                "Authorization": "Bearer ${API_KEY}"
-            }
-        }
+  "mcpServers": {
+    "huxiu-mcp": {
+      "url": "https://api-ms-assist.huxiu.com/mcp",
+      "headers": {
+        "Authorization": "Bearer ${API_KEY}"
+      }
     }
+  }
 }
 ```
 
